@@ -41,3 +41,8 @@ Is the managed DLL working? True
 Is the Native DLL working? True
 ```
 This confirms that both the managed and the native DLLs are correctly integrated and functioning within your Unity project.
+
+
+## References
++ [Building plug-ins for desktop platforms - Unity official documentation](https://docs.unity3d.com/Manual/PluginsForDesktop.html)
++ [Low-level native plug-in Profiler API](https://docs.unity3d.com/Manual/LowLevelNativePluginProfiler.html)
