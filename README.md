@@ -29,19 +29,32 @@ Ensure the target directory exists before running the command. If not, create it
 ```bash
 mkdir -p UnityDllHandling/UnityProject/Assets/Plugins/Native/MacOS/
 ```
+#### On Linux
+
+Execute the following command in the terminal to compile the native DLL:
+
+```bash
+g++ --shared -fPIC UnityDllHandling/NativeDll/NativeDll/dllmain.cpp -o UnityDllHandling/UnityProject/Assets/Plugins/Native/Linux/NativeDll.so
+```
+
+Ensure the target directory exists before running the command. If not, create it using:
+```bash
+mkdir -p UnityDllHandling/UnityProject/Assets/Plugins/Native/Linux/
+```
 
 ### 2. Testing in the Unity Editor
 
 To verify the DLLs are working correctly within Unity, perform the following steps:
 1. Navigate to `Assets/Scenes/` and open `RunThisScene.unity`.
 2. Enter play mode by clicking the play button.
-3. Observe the output on the screen, which should display:
+3. Observe the output on the screen.
+4. The console should print information directly from the plugins.
 ```
 Is the managed DLL working? True
 Is the Native DLL working? True
 ```
 This confirms that both the managed and the native DLLs are correctly integrated and functioning within your Unity project.
-
+```
 
 ## References
 + [Building plug-ins for desktop platforms - Unity official documentation](https://docs.unity3d.com/Manual/PluginsForDesktop.html)
